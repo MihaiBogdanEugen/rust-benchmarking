@@ -24,10 +24,6 @@ run: build
 bench: build
 	cargo bench
 
-## test: Run tests for package
-test:
-	cargo test
-
 ## update: Update dependencies listed in Cargo.lock
 update:
 	cargo update
@@ -44,10 +40,6 @@ clean:
 fmt:
 	cargo fmt --all
 
-## test-all: Run all the tests
-test-all:
-	cargo test --verbose
-
 ## clippy: Run cargo clippy for static ckecks
 clippy:
 	cargo clippy --all-targets --all-features --verbose
@@ -56,4 +48,4 @@ clippy:
 update-input:
 	git submodule update --remote
 
-.PHONY: help build-debug run-debug build run bench test update check clean fmt test-all clippy update-input
+.PHONY: help build-debug run-debug build run bench update check clean fmt clippy update-input
