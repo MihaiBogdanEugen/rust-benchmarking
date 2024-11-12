@@ -12,6 +12,10 @@ fn main() {
     let cli: Cli = Cli::parse();
     let number: f32 = cli.val;
     let result: f32 = number.isr();
+    let result_optimized_unsafe: f32 = number.isr();
+    let result_optimized: f32 = number.isr();
 
-    println!("Inverse Squre Root of {number} is {result}")
+    println!("Inverse Squre Root (basic) of {number} is {result}");
+    println!("Inverse Squre Root (optimized) of {number} is {result_optimized}");
+    println!("Inverse Squre Root (otpimized_unsafe) of {number} is {result_optimized_unsafe}");
 }
